@@ -124,6 +124,8 @@ var authorEmail = "nima.maleki92@gmail.com";
 
 }, 30000);
 
-app.listen('8081')
-console.log('Magic happens on port 8081');
+var port = process.env.PORT || 8000;
+app.listen(port, function() {
+    console.log("App is running on port " + port);
+});
 exports = module.exports = app;
